@@ -1,0 +1,25 @@
+#include <stdio.h>
+#include <string.h>
+#include <math.h>
+#include <stdlib.h>
+
+int main() {
+
+    int t;
+    scanf("%d",&t);
+    while(t--)
+    {
+        int n,k;
+        scanf("%d %d",&n,&k);
+        int sum=n,rem=0;
+        while(n>=k)
+        {
+            rem=n%k;
+            n=n/k;
+            sum=sum+n;
+            n=n+rem;
+        }
+        printf("%d\n",sum);
+    }
+    return 0;
+}
